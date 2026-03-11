@@ -3,7 +3,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 
 TEMPLATE_CONFIRMACAO = r'''
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
