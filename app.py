@@ -777,6 +777,7 @@ TEMPLATE_ENDERECO = r'''
 </head>
 <body>
     <script src="/static/assistant.js"></script>
+    <script src="/static/cep-mask.js"></script>
     <header class="main-header">
         <div class="header-logos">
             <img src="/static/logo_fgm.png" alt="Logo FGM" class="logo">
