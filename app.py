@@ -1468,11 +1468,11 @@ TEMPLATE_INDEX = '''
             margin: 18px auto 0 auto;
         }
         .benefit {
-            min-width: 320px;
+            min-width: 220px;
             max-width: 520px;
-            width: 50%;
+            width: 100%;
             min-height: 44px;
-            height: 48px;
+            height: auto;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1488,9 +1488,10 @@ TEMPLATE_INDEX = '''
             padding: 10px 18px;
             transition: box-shadow 0.25s, transform 0.18s, background 0.18s;
             cursor: pointer;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            white-space: normal;
+            overflow-wrap: break-word;
+            word-break: break-word;
+            text-align: center;
         }
         .benefit:hover {
             box-shadow: 0 6px 24px #1155cc44, 0 2px 12px #1155cc22;
