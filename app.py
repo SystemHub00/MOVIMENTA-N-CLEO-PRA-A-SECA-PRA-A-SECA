@@ -375,15 +375,8 @@ TEMPLATE_REVISAO = r'''
                 </div>
             </div>
             <div class="form-group" style="background: #edeaf6; border: 2px solid #1155cc; border-radius: 16px; padding: 18px 22px; margin-bottom: 18px; box-shadow: 0 2px 12px #b3a0d722;">
-                <label for="como_conheceu" style="font-weight:700; color:#1155cc; margin-bottom:7px; font-size:1.09em; display:block; width:100%; max-width:380px;">Como conheceu:</label>
-                <select id="como_conheceu" name="como_conheceu" style="border:1.5px solid #b3a0d7; color:#222; background:#f7faff; box-shadow:0 2px 12px #b3a0d722; transition:border 0.2s, box-shadow 0.2s; border-radius:14px; padding:13px 18px; font-size:1.09em; font-family:'Wise', Arial, sans-serif; outline:none; appearance:none; width:100%; max-width:380px; min-width:220px; margin:0 auto; display:block;">
-                    <option value="">Selecione</option>
-                    <option value="Instagram" {% if dados.get('como_conheceu') == 'Instagram' %}selected{% endif %}>Instagram</option>
-                    <option value="WhatsApp" {% if dados.get('como_conheceu') == 'WhatsApp' %}selected{% endif %}>WhatsApp</option>
-                    <option value="YouTube" {% if dados.get('como_conheceu') == 'YouTube' %}selected{% endif %}>YouTube</option>
-                    <option value="Indicação" {% if dados.get('como_conheceu') == 'Indicação' %}selected{% endif %}>Indicação</option>
-                    <option value="Outro" {% if dados.get('como_conheceu') == 'Outro' %}selected{% endif %}>Outro</option>
-                </select>
+                    <label for="como_conheceu" style="font-weight:700; color:#1155cc; margin-bottom:7px; font-size:1.09em; display:block; width:100%; max-width:380px;">Como conheceu:</label>
+                    <input type="text" id="como_conheceu" name="como_conheceu" placeholder="Digite como conheceu o projeto" value="{{ dados.get('como_conheceu', '') }}" style="border:1.5px solid #b3a0d7; color:#222; background:#f7faff; box-shadow:0 2px 12px #b3a0d722; transition:border 0.2s, box-shadow 0.2s; border-radius:14px; padding:13px 18px; font-size:1.09em; font-family:'Wise', Arial, sans-serif; outline:none; width:100%; max-width:380px; min-width:220px; margin:0 auto; display:block;">
             </div>
             <div class="confirmacao-box">
                 <label><input type="checkbox" id="confirma-dados">&nbsp;Confirmo que todas as informações fornecidas são verdadeiras e estou de acordo com os termos de participação. Autorizo o uso dos meus dados para fins de inscrição e contato relacionado ao curso.<br><br>
@@ -1650,7 +1643,7 @@ TEMPLATE_INDEX = '''
             </div>
         </section>
         <div style="text-align:center;">
-            <a href="/inscricao" class="cta-btn">Quero me inscrever agora!</a>
+            <a href="/inscricao" class="cta-btn">QUERO ME INSCREVER!</a>
         </div>
         <section id="cursos" class="cursos-section">
             <p class="cursos-title">CURSOS DISPONÍVEIS:</p>
@@ -1788,6 +1781,7 @@ def confirmacao():
         session.get('data_inicio',''),
         session.get('encerramento',''),
         session.get('endereco_curso',''),
+        session.get('como_conheceu',''),
     ]
     try:
         append_to_sheet(dados)
