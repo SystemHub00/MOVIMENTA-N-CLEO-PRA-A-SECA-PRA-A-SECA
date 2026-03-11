@@ -171,7 +171,7 @@ TEMPLATE_CONFIRMACAO = r'''
         </div>
         <div class="btns">
             <a class="btn-whatsapp" href="https://wa.me/?text=Acabei%20de%20me%20inscrever%20em%20um%20curso%20gratuito%20incr%C3%ADvel!%20Garanta%20sua%20vaga%20tamb%C3%A9m%20e%20venha%20transformar%20sua%20carreira%20comigo.%20Inscreva-se%20aqui:%20https://movimenta-nucleo-praca-seca.onrender.com" target="_blank">&#128241; COMPARTILHAR NO WHATSAPP</a>
-            <a class="btn-inicio" href="/">VOLTAR AO INÍCIO</a>
+            <a class="btn-inicio" href="/" style="display: flex; align-items: center; justify-content: center; min-width: 220px; min-height: 48px; font-size: 1.18em; font-weight: 800; border-radius: 18px; border: 2px solid #381c7a; background: #fff; color: #381c7a; box-shadow: 0 2px 12px #381c7a22; letter-spacing: 0.5px; transition: background 0.2s, box-shadow 0.2s, transform 0.1s; outline: none; text-transform: uppercase; text-align: center; margin: 0 auto;">VOLTAR AO INÍCIO</a>
         </div>
         <div class="proximos-passos">
             <b>Próximos Passos:</b>
@@ -1758,9 +1758,7 @@ def confirmacao():
     # Gera protocolo único
     protocolo = str(uuid.uuid4())[:8]
     session['protocolo'] = protocolo
-    data_envio = datetime.now().strftime('%d/%m/%Y %H:%M:%S')
     dados = [
-        data_envio,
         protocolo,
         session.get('nome',''),
         session.get('genero',''),
