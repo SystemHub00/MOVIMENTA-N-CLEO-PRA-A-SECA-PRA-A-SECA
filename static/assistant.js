@@ -9,7 +9,7 @@ let steps = [];
 const path = window.location.pathname;
 if (path === '/' || path === '/index' || path === '/index.html') {
   steps = [
-    'Bem-vinda! Para começar, clique no botão <b>Quero me inscrever agora!</b> logo abaixo.',
+    'Bem-vinda! Para começar, clique no botão <b>INSCREVER ME!</b> logo abaixo.',
     'Esse botão vai te levar para o formulário de inscrição. Clique nele para continuar.'
   ];
 } else if (path.startsWith('/inscricao')) {

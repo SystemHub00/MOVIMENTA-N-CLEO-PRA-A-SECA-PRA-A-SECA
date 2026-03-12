@@ -1,3 +1,41 @@
+input#nome,
+input#cpf,
+input#nascimento,
+input#whatsapp,
+input#email,
+select#genero,
+input#cep,
+input#endereco,
+input#numero,
+input#complemento,
+input#bairro,
+input#cidade,
+select#estado,
+select#local,
+select#curso,
+select#turma,
+input#horario,
+input#data_inicio,
+input#encerramento,
+input#como_conheceu,
+textarea,
+button#proximo,
+button#voltar,
+button#finalizar,
+button#editar,
+button#enviar,
+button.btn-proximo,
+button.btn-voltar,
+button.btn-finalizar,
+button.btn-editar,
+button.btn-enviar {
+    width: 89% !important;
+    min-width: 180px !important;
+    max-width: 490px !important;
+    margin: 0 auto 8px auto !important;
+    display: block;
+    box-sizing: border-box;
+}
 /* Select estilizado para inputs bonitos */
 select {
     background: #f3f0fa;

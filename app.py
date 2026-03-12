@@ -1645,7 +1645,7 @@ TEMPLATE_INDEX = '''
             </div>
         </section>
         <div style="text-align:center;">
-            <a href="/inscricao" class="cta-btn">QUERO ME INSCREVER!</a>
+            <a href="/inscricao" class="cta-btn">INSCREVER ME!</a>
         </div>
         <section id="cursos" class="cursos-section">
             <p class="cursos-title">CURSOS DISPONÍVEIS:</p>
